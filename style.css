@@ -1,0 +1,703 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FAF7F2;
+    color:#2D2D2D;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    padding:90px 10%;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#CC5500;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:#2D2D2D;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#CC5500;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.hero-content{
+
+    color:white;
+    max-width:800px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+    margin-bottom:40px;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    background:#CC5500;
+
+    color:white;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.hero-btn:hover{
+
+    background:#A84300;
+
+    transform:translateY(-4px);
+
+}
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#CC5500;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:18px;
+}
+
+
+/* =========================
+   FOOD CARDS
+========================= */
+
+.food-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.food-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:.4s;
+    text-align:center;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.food-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.food-card h3{
+    color:#CC5500;
+    font-size:26px;
+    margin:20px 0 10px;
+}
+
+.food-card p{
+    padding:0 20px;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.food-btn{
+    display:inline-block;
+    margin-bottom:25px;
+    background:#CC5500;
+    color:#fff;
+    padding:12px 30px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.food-btn:hover{
+    background:#A84300;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    background:#FFF8F2;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.gallery-container img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+    transition:.4s;
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.about-text h2{
+    font-size:42px;
+    color:#CC5500;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#FFF8F2;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-family:'Poppins',sans-serif;
+    font-size:16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+    border:2px solid #CC5500;
+}
+
+.contact-form button{
+
+    background:#CC5500;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+
+    background:#A84300;
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#3B3024;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h3{
+
+    color:#CC5500;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+footer p{
+
+    color:#ddd;
+    margin:8px 0;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#FAF7F2;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#CC5500;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#A84300;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+    }
+
+    .hero h1{
+
+        font-size:42px;
+    }
+
+    .hero p{
+
+        font-size:18px;
+    }
+
+    section{
+
+        padding:70px 8%;
+    }
+}
+/* ================================
+   EXTRA POLISH
+================================ */
+
+/* Smooth interactions */
+.hero-btn,
+.food-card,
+.nav-links a {
+    transition: all 0.3s ease;
+}
+
+/* Explore Foods button */
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Food cards */
+.food-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Navigation links */
+.nav-links a:hover {
+    transform: translateY(-2px);
+}
+
+/* Better images */
+.food-card img {
+    transition: transform 0.4s ease;
+}
+
+.food-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Mobile improvements */
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
+/* =================================
+   MOBILE + GALLERY + KENYAN TOUCH
+================================= */
+
+/* Better mobile navigation and layout */
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+    }
+}
+
+/* Gallery images */
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Kenyan-inspired section detail */
+section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 8px auto 0;
+    background: #CC5500;
+    border-radius: 5px;
+}
+
+/* Warm Kenyan-style section background */
+.gallery,
+.about,
+.contact {
+    background: #fff8f0;
+}
+/* =========================================
+   STREET FOODS PAGE
+========================================= */
+
+.foods-hero {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background: #fff8f0;
+}
+
+.foods-hero h1 {
+    color: #CC5500;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.foods-hero p {
+    color: #555;
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.foods-section {
+    padding: 50px 7%;
+    background: #ffffff;
+}
+
+.food-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.food-heading h2 {
+    color: #CC5500;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.food-heading p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#foodSearch {
+    width: min(500px, 90%);
+    padding: 14px 20px;
+    border: 2px solid #CC5500;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#foodSearch:focus {
+    box-shadow: 0 0 0 4px rgba(204, 85, 0, 0.15);
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.food-grid .food-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.food-grid .food-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    color: #CC5500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.food-info span {
+    display: inline-block;
+    font-weight: bold;
+    color: #CC5500;
+    background: #fff1e6;
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+
+/* Food page navigation */
+.nav-links a.active {
+    color: #CC5500;
+    font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .foods-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .foods-section {
+        padding: 40px 5%;
+    }
+
+    .foods-hero {
+        padding: 60px 20px 40px;
+    }
+
+    .foods-hero h1 {
+        font-size: 32px;
+    }
+
+    .foods-hero p {
+        font-size: 16px;
+    }
+
+    .food-heading h2 {
+        font-size: 28px;
+    }
+
+    .food-grid .food-card img {
+        height: 220px;
+    }
+}

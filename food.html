@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Street Food | Street Foods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">KENYAN STREET FOOD</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="foods.html" class="active">Street Foods</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="foods-hero">
+        <h1>Kenyan Street Foods</h1>
+        <p>Discover the flavours, aromas and culture behind Kenya's favourite street bites.</p>
+    </section>
+
+    <section class="foods-section">
+
+        <div class="food-heading">
+            <h2>Explore Our Foods</h2>
+            <p>From smoky grills to crispy bites, there's something for everyone.</p>
+
+            <input
+                type="text"
+                id="foodSearch"
+                placeholder="Search for a food..."
+                onkeyup="searchFoods()"
+            >
+        </div>
+
+        <div class="food-grid" id="foodGrid">
+
+            <div class="food-card">
+                <img src="images/samosa.jpg" alt="Samosa">
+                <div class="food-info">
+                    <h3>Samosa</h3>
+                    <p>Crispy golden pastry filled with a tasty, well-seasoned filling.</p>
+                    <span>KSh 50</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/roasted-maize.jpg" alt="Roasted Maize">
+                <div class="food-info">
+                    <h3>Roasted Maize</h3>
+                    <p>Smoky, charred maize roasted over an open flame — a true street favourite.</p>
+                    <span>From KSh 20</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/bhajia.jpg" alt="Bhajia">
+                <div class="food-info">
+                    <h3>Bhajia</h3>
+                    <p>Crispy potato slices coated in spiced batter and fried until golden.</p>
+                    <span>KSh 50</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/mshikaki.jpg" alt="Mshikaki">
+                <div class="food-info">
+                    <h3>Mshikaki</h3>
+                    <p>Juicy, smoky pieces of seasoned meat grilled on a skewer.</p>
+                    <span>KSh 50</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/mutura.jpg" alt="Mutura">
+                <div class="food-info">
+                    <h3>Mutura</h3>
+                    <p>A classic Kenyan street delicacy, packed with bold smoky flavour.</p>
+                    <span>Price varies</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/kebab.jpg" alt="Kebab">
+                <div class="food-info">
+                    <h3>Kebab</h3>
+                    <p>Seasoned meat grilled until deliciously smoky and golden.</p>
+                    <span>Price varies</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/smocha.jpg" alt="Smocha">
+                <div class="food-info">
+                    <h3>Smocha</h3>
+                    <p>A Kenyan street-food classic combining smoky sausage and chapati.</p>
+                    <span>KSh 70</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/smokie.jpg" alt="Smokie">
+                <div class="food-info">
+                    <h3>Smokie</h3>
+                    <p>A classic Kenyan street snack served with kachumbari and sauces.
+                    <span>Price varies</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="images/viazi-karai.jpg" alt="Viazi Karai">
+                <div class="food-info">
+                    <h3>Viazi Karai</h3>
+                    <p>Spiced potatoes coated in batter and fried to a beautiful golden crisp.</p>
+                    <span>KSh 50</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Kenyan Street Food | Explore Kenya, One Bite at a Time.</p>
+</footer>
+
+<script>
+function searchFoods() {
+    let input = document.getElementById("foodSearch").value.toLowerCase();
+    let cards = document.querySelectorAll(".food-card");
+
+    cards.forEach(function(card) {
+        let foodName = card.querySelector("h3").textContent.toLowerCase();
+
+        if (foodName.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
